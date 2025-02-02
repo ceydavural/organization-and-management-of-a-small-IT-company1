@@ -8,13 +8,12 @@ const ToDoList = require('./models/toDoList');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware
+
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
+app.use(express.static(path.join(__dirname, 'public'))); 
 
-// MongoDB connection
 const uri = "mongodb+srv://user:1234@cluster0.9pgef.mongodb.net/toDoList?retryWrites=true&w=majority";
 
 mongoose.connect(uri)
