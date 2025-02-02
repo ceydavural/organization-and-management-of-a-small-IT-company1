@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Uygulaması</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do List</h1>
+            <nav>
+                <a href="#" id="toCalendar">Geçmiş</a>
+                <a href="#" id="toTaskPage" style="display: none;">To-Do List</a>
+            </nav>
+        </header>
+        
+        <main id="taskPage">
+            <input type="text" id="newTaskInput" placeholder="Yeni Görev Ekle...">
+            <button id="addTaskBtn">Ekle</button>
+            <ul id="taskList"></ul>
+        </main>
+        
+        <main id="calendarPage" style="display: none;">
+            <div id="datepicker"></div>
+            <div id="selectedDateTasks"></div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
